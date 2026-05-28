@@ -21,6 +21,17 @@ export const categoryLabels: Record<ProjectCategory, string> = {
 
 export const projects: Project[] = [
   {
+    id: "tomato-clock",
+    title: "番茄钟 · GoldenTomato",
+    description:
+      "跨平台专注工具：Windows 桌面端环形番茄计时、成就与休息流程，配套微信小程序；数据本地保存，支持主题、铃声与专注统计。",
+    category: "tool",
+    tags: ["番茄工作法", "Windows", "微信小程序", "Microsoft Store"],
+    year: "2026",
+    href: "https://yichong108.github.io/tomato-clock-site/",
+    featured: true,
+  },
+  {
     id: "nebula-dashboard",
     title: "Nebula Dashboard",
     description:
