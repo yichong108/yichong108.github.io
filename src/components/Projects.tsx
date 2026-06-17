@@ -40,32 +40,34 @@ export function Projects() {
               精选作品
             </h2>
             <p className="mt-3 max-w-xl text-text-muted">
-              从 SaaS 控制台到开源组件库 — 每个项目都追求性能、可维护性与出色的用户体验。
+              专注工具与效率产品 — 用清晰的交互与本地优先的设计，帮助用户更好地进入心流。
             </p>
           </div>
 
-          <div
-            className="flex flex-wrap gap-2"
-            role="tablist"
-            aria-label="项目分类筛选"
-          >
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                type="button"
-                role="tab"
-                aria-selected={active === cat}
-                onClick={() => setActive(cat)}
-                className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors duration-200 cursor-pointer ${
-                  active === cat
-                    ? "border border-neon-cyan/40 bg-neon-cyan text-white shadow-sm"
-                    : "border border-border bg-white text-text-muted shadow-sm hover:border-neon-cyan/30 hover:text-text-primary"
-                }`}
-              >
-                {cat === "all" ? "全部" : categoryLabels[cat]}
-              </button>
-            ))}
-          </div>
+          {projects.length > 1 && (
+            <div
+              className="flex flex-wrap gap-2"
+              role="tablist"
+              aria-label="项目分类筛选"
+            >
+              {categories.map((cat) => (
+                <button
+                  key={cat}
+                  type="button"
+                  role="tab"
+                  aria-selected={active === cat}
+                  onClick={() => setActive(cat)}
+                  className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors duration-200 cursor-pointer ${
+                    active === cat
+                      ? "border border-neon-cyan/40 bg-neon-cyan text-white shadow-sm"
+                      : "border border-border bg-white text-text-muted shadow-sm hover:border-neon-cyan/30 hover:text-text-primary"
+                  }`}
+                >
+                  {cat === "all" ? "全部" : categoryLabels[cat]}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
 
         <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
